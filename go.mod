@@ -1,5 +1,5 @@
 module github.com/celestiaorg/celestia-app
-
+//tests
 go 1.20
 
 require (
