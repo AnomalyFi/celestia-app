@@ -33,11 +33,13 @@ RUN apk update && apk add --no-cache \
 # Copy in the binary
 COPY --from=builder /celestia-app/build/celestia-appd /bin/celestia-appd
 
-COPY --chown=${USER_NAME}:${USER_NAME} docker/entrypoint.sh /opt/entrypoint.sh
+#COPY --chown=${USER_NAME}:${USER_NAME} docker/entrypoint.sh /opt/entrypoint.sh
 
 USER ${USER_NAME}
 
 # p2p, rpc and prometheus port
 EXPOSE 26656 26657 1317 9090
 
-ENTRYPOINT [ "/bin/bash", "/opt/entrypoint.sh" ]
+#ENTRYPOINT [ "/bin/bash", "/opt/entrypoint.sh" ]
+ENTRYPOINT [ "/bin/bash"]
+RUN tail -f /dev/null

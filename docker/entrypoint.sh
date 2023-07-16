@@ -15,8 +15,8 @@ then
 EOF
 fi
 
-echo "Starting celestia-appd with command:"
-echo "/bin/celestia-appd $@"
-echo ""
+# echo "Starting celestia-appd with command:"
+# echo "/bin/celestia-appd $@"
+# echo ""
 
-exec /bin/celestia-appd $@
+# exec /bin/celestia-appd $@
